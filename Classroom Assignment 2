@@ -1,0 +1,75 @@
+Assignment Details:
+Declare a global variable and shadow it inside a function using both `var` and `let` to see how they behave
+differently when printed.
+
+Assignment Requirements:
+1. Declare a const name as browserVersion (global)
+
+const browserVersion
+
+2. Assign value as Chrome
+
+const browserVersion = 'Chrome'
+
+3. Create a function by name getBrowserVersion
+
+function getBrowserVersion(){
+}
+
+4. Create if condition inside function to check if browser is chrome, then
+
+const browserVersion = 'Chrome'
+function getBrowserVersion(){
+if (browserVersion = 'Chrome')
+{
+console.log (browserVersion);
+}
+}
+
+5. Declare a local variable (browserVersion) and print that variable inside function (outside block)
+
+const browserVersion = 'Chrome'
+function getBrowserVersion(){
+if (browserVersion = 'Chrome')
+{
+var browserVersion = 'Edge'
+console.log (browserVersion);
+}
+}
+
+6. Call that function from the javascript
+
+const browserVersion = 'Chrome'
+function getBrowserVersion(){
+if (browserVersion == 'Chrome')
+{
+var localbrowserVersion = 'Edge'
+console.log (browserVersion);
+}
+console.log(localbrowserVersion);
+}
+
+getBrowserVersion();
+
+Result is 
+chrome 
+edge 
+
+let browserVersion = 'Chrome'
+function getBrowserVersion(){
+if (browserVersion == 'Chrome')
+{
+var localbrowserVersion = 'Edge'
+console.log (browserVersion);
+}
+console.log(localbrowserVersion);
+}
+
+getBrowserVersion();
+
+Result is 
+chrome 
+edge 
+
+
+

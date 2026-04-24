@@ -1,0 +1,16 @@
+In JavaScript, being single-threaded means it can only execute one piece of code at a time. Non-blocking I/O means it doesn't stop and wait for "heavy" tasks (like reading a file or fetching data) to finish; instead, it moves on to the next line of code while those tasks happen in the background. [1, 2, 3, 4, 5] 
+------------------------------
+## 🧵 Single-Threaded
+JavaScript uses a single call stack to manage execution. [3] 
+
+* One task at a time: It cannot process two functions simultaneously on the main thread.
+* Sequential execution: Code generally runs line-by-line from top to bottom.
+* Simplified logic: Because there is only one thread, developers don't have to worry about complex issues like "deadlocks" that happen in multi-threaded languages. [2, 6, 7, 8, 9] 
+
+## 🚫 Non-Blocking I/O
+I/O (Input/Output) refers to operations like reading/writing files, database queries, or network requests. [1, 10] 
+
+* No waiting: When a non-blocking request is made, JavaScript sends it off and immediately continues with the next task.
+* Background processing: While the main thread keeps running, the environment (like the browser or [Node.js](https://nodejs.org/learn/asynchronous-work/overview-of-blocking-vs-non-blocking)) handles the heavy lifting.
+* High efficiency: This allows a single server to handle thousands of concurrent connections because it’s never "stuck" waiting for a slow disk or network. [1, 11, 12, 13, 14, 15] 
+

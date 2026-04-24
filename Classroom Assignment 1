@@ -1,0 +1,73 @@
+Classroom on typeof operator :
+
+Classroom Assignment 1 - by Jayachitra
+
+Assignment Details:
+*********** Q1 ***********
+Declare variables using `let` for different data types in JavaScript, and verify their types using `typeof`, including
+an uninitialized variable.
+
+< JC > 
+let x= 10
+console.log(x) 
+console.log(typeof x)
+
+let userName ='Jayachitra'
+console.log(userName)
+console.log(typeof userName)
+
+let validValue = true
+console.log(validValue)
+console.log(typeof validValue)
+
+let check 
+console.log(check)
+console.log(typeof check)
+
+var uni 
+console.log(uni)
+console.log(typeof uni)
+
+let account = 789478459045098543n
+console.log(account)
+console.log(typeof account)
+
+*********** Q2 ***********
+Assignment Requirements:
+Create the following variables using let (not using var) and check their typeOf
+a) firstName
+
+let firstName =' ' 
+console.log(firstName)
+console.log(typeof firstName)
+
+b) companyName
+
+let companyName = null
+console.log(companyName)
+console.log(typeof companyName)
+
+c) mobileNumber
+
+let mobileNumber = 0
+console.log(mobileNumber)
+console.log(typeof mobileNumber)
+
+d) isAutomation
+
+let isAutomation = true
+console.log(isAutomation)
+console.log(typeof isAutomation)
+
+e) hasPlaywright (do not assign)
+
+let hasPlaywright
+console.log(hasPlaywright)
+console.log(hasPlaywright)
+
+Code	console.log         Output	        typeof Output
+let name = ' '	         (a space)	        string
+let name = ''	     (nothing/empty line)	    string
+let name;             	undefined	          undefined
+
+

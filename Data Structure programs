@@ -1,0 +1,53 @@
+Data Type :
+
+#1 - number
+
+var a=5
+console.log(a)
+console.log(typeof a)
+
+R : 5
+
+#2 - string
+
+var jc ='sprishya'
+console.log(jc)
+console.log(typeof jc)
+
+R : sprishya
+
+#3 - boolean
+
+var jcvalid = true
+console.log(jcvalid)
+console.log(typeof jcvalid)
+ R: True
+
+******** Based on the value we assign data type will be considered.
+
+#4 -  Undefined
+
+var xyz
+console.log(xyz)
+console.log(typeof xyz)
+R: Undefined
+
+#5 - Null
+
+var user = null
+console.log(user)
+console.log(typeof user)
+R : null
+R: OBJECT ** Null is originally a primitative data type . It pulls as OBJECT
+
+****** Usage : user phone number , name field we do not know priorily , so we use null - in that box no values will appear or it will appear blank
+in forms in web pages.
+if suppose in that form - user leave as blank means - it will take the data type as undefined instead of null.
+
+#6 - big int
+
+var account = 988943894390435543n
+
+***** 3 dots will appear below the number indicating that its exceeding the integer value limit , so you have to end with n variable
+
+

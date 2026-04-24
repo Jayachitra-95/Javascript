@@ -14,3 +14,7 @@ I/O (Input/Output) refers to operations like reading/writing files, database que
 * Background processing: While the main thread keeps running, the environment (like the browser or [Node.js](https://nodejs.org/learn/asynchronous-work/overview-of-blocking-vs-non-blocking)) handles the heavy lifting.
 * High efficiency: This allows a single server to handle thousands of concurrent connections because it’s never "stuck" waiting for a slow disk or network. [1, 11, 12, 13, 14, 15] 
 
+Term	                   What it does	        Allowed with let?	          Allowed with const?
+Declaration              Creates the variable	 Yes                       	Yes
+Reassignment	           Changes the value	   Yes	                      No
+Redeclaration	           Creates it again	     No	                        No

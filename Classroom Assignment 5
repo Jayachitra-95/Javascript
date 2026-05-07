@@ -1,0 +1,87 @@
+
+Learning Objective:
+Learn if-else and switch case
+
+Assignment Details:
+Create and call two JavaScript functions: `launchBrowser` with `if-else` for browser launch messages, and
+`runTests` with `switch` for test type messages.
+
+Assignment Requirements:
+Create two functions : launchBrowser, runTests where,
+ a) launchBrowser need to take input as browserName (string) and do not return any
+ - use if-else (chrome or otherwise)
+ - Print the value
+ b) runTests need to take input as testType (string) and do not return any
+ - use switch case (smoke, sanity, regression, default (smoke))
+ - Print the values
+Call that function from the javascript
+
+My first Answer :
+
+function launchBrowser(browser)
+{
+if ( browser != "CHROME ")
+{
+console.log ( browser ) ;
+}
+else console.log ("CHROME" );
+}
+
+
+function runTests()
+{
+switch (TEST):
+case 'SMOKE' :
+console.log ('SMOKE TEST');
+break();
+
+case 'SANITY':
+console.log('SANITY TEST');
+break();
+
+case 'REGRESSION':
+console.log('REGRESSION TEST');
+break();
+}
+
+var browser = "CHROME" ;
+var browserVersion = launchBrowser(browser) ;
+
+var TEST = "SANITY" ;
+var testResult = runTests();
+
+
+corrected answer :
+function launchBrowser(browser) {
+    // Removed the extra space in "CHROME"
+    if (browser === "CHROME") {
+        console.log("CHROME");
+    } else {
+        console.log(browser);
+    }
+}
+
+function runTests(testType) {
+    // Use curly braces for switch
+    switch (testType) {
+        case 'SMOKE':
+            console.log('SMOKE TEST');
+            break; // No parentheses
+        case 'SANITY':
+            console.log('SANITY TEST');
+            break;
+        case 'REGRESSION':
+            console.log('REGRESSION TEST');
+            break;
+        default:
+            console.log('Unknown Test Type');
+    }
+}
+
+var browser = "CHROME";
+launchBrowser(browser); // Prints: CHROME
+
+var TEST = "SANITY";
+runTests(TEST); // Prints: SANITY TEST
+
+

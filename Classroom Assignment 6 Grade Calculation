@@ -1,0 +1,42 @@
+Classroom Assignment: Grade Calculation
+
+Assignment Details:
+Write a JavaScript function that evaluates a student's score and returns their grade using a switch statement
+to assess score ranges.
+
+Assignment Requirements:
+1. Create a function that takes a student's score as a parameter.
+2. Declare and initialize the variable.
+3. Use `switch` statement inside the function.
+4. Return the corresponding grade.
+5. Call the function and print the result.
+
+Hints to Solve:
+Use a `switch` statement with `true` for score range checks to assign grades.
+
+My first Answer :
+
+function calculateGrade(score) {
+    
+    switch (true) {
+        case (score >= 90):
+            return "A";
+        case (score >= 80):
+            return "B";
+        case (score >= 70):
+            return "C";
+        case (score >= 60):
+            return "D";
+        case (score < 60 && score >= 0):
+            return "F";
+        default:
+            return "Invalid Score";
+    }
+}
+
+
+var studentScore = 85;
+
+
+var grade = calculateGrade(studentScore);
+console.log("The student's grade is: " + grade);

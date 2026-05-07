@@ -1,0 +1,57 @@
+Learning Objective:
+Learn to implement a JavaScript function determining whether a given number is odd or even.
+
+
+Assignment Details:
+Write a JavaScript function named `isOddOrEven` that takes an integer as input and returns `Odd` if the
+number is odd and `"Even"` if the number is even.
+
+Assignment Requirements:
+1. Create a function named `isOddOrEven` that takes a number as a parameter
+2. Declare and initialize the variable
+3. Use a conditional statement to check if the number is divisible by 2
+4. Call the function and print the result
+Hints to Solve:
+Use an operator that checks divisibility by 2 for evenness, and apply a conditional statement to return "Even"
+or "Odd".
+
+My first Answer :
+
+function isOddOrEven(){
+var number=0
+number=number++
+if (number%2==0)
+{
+console.log("It is even number",number)
+}
+else
+{
+console.log("It is odd number",number)
+}
+}
+
+isOddOrEven();
+
+Corrected answer :
+// 1. Create function with a parameter
+function isOddOrEven(number) { 
+    
+    // 3. Use a conditional statement to check divisibility by 2
+    // Use === for comparison
+    if (number % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+// 2. Declare and initialize the variable
+var myNumber = 10; 
+
+// 4. Call the function and print the result
+var result = isOddOrEven(myNumber);
+console.log("The number " + myNumber + " is " + result);
+
+
+
+

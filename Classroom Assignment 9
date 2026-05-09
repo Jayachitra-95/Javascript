@@ -1,0 +1,111 @@
+Home Assignment: String
+Learning Objective:
+Learn how to manipulate strings and use looping statements in a programming language to solve practical problems.
+
+Assignment Details:
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+Example 1:
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+
+my code :
+let s = "Hello World"
+console.log(s.length);
+var a = s.slice(0,5);
+console.log(a);
+var b = s.slice(6,11);
+console.log(b);
+length = (b.length);
+console.log(`the length of last word is ${length}`);
+
+
+Example 2:
+Input: s = " fly me to the moon "
+Output: 4
+Explanation: The last word is "moon" with length 4.
+
+my code :
+let s = "   fly me   to   the moon  ";
+console.log(s.length);
+function lengthOfLastWord(s) {
+        let trim = s.trim();
+        console.log(trim);
+        console.log(trim.length);
+        let words = trim.split(" ");
+        console.log(words);
+        console.log(words.length);
+        let lastWord = words[words.length - 1];
+        console.log(lastWord);
+        return lastWord.length;
+
+
+Example 3:
+Write a function to check if two strings are anagrams.
+Input: isAnagram('listen', 'silent')
+Output: true
+Input: isAnagram('hello', 'world')
+Output: false
+
+Explanation: An anagram is when you mix up the letters of a word to make a new one, using all the letters.
+
+
+Example:3
+1. Remove spaces and convert all letters to the same case
+2. Sort the Characters
+3. Compare Sorted Strings
+4. Return the Result
+
+my code :
+function isAnagram(str1, str2) {
+    let cleanStr1 = str1.trim().toLowerCase();
+    let cleanStr2 = str2.trim().toLowerCase();
+
+    if (cleanStr1.length !== cleanStr2.length) {
+        return false;
+    }
+
+    let split1 = cleanStr1.split("");
+    let sort1= cleanStr1.sort();
+    let join1= cleanStr1.join();
+   
+    let sorted2 = cleanStr2;
+    let split2 = cleanStr2.split("");
+    let sort2= cleanStr2.sort();
+    let join2= cleanStr2.join();
+
+    return sort1 === sort2;
+
+console.log(isAnagram('listen', 'silent')); 
+console.log(isAnagram('hello', 'world'));  
+
+Notes : cleanStr1.sort(): Strings don't have a .sort() method. Only arrays do.
+That's why we use split("") first.join(""): If you use .join() without quotes inside, it adds commas (like e,i,l,n,s,t). 
+Using join("") keeps it as a clean word (eilnst).
+Missing }: Make sure to close your function with a curly bracket } before calling your console.log.
+this was returning error . 
+
+so correct code :
+function isAnagram(str1, str2) {
+    let cleanStr1 = str1.trim().toLowerCase();
+    let cleanStr2 = str2.trim().toLowerCase();
+
+    if (cleanStr1.length !== cleanStr2.length) {
+        return false;
+    }
+
+    // You must sort the SPLIT array, not the string!
+    let split1 = cleanStr1.split("");
+    let sort1 = split1.sort(); // Use the array 'split1'
+    let join1 = sort1.join(""); // Join it back to compare
+
+    let split2 = cleanStr2.split("");
+    let sort2 = split2.sort(); // Use the array 'split2'
+    let join2 = sort2.join("");
+
+    // Compare the final joined strings
+    return join1 === join2;
+}
+
+console.log(isAnagram('listen', 'silent')); // true
+console.log(isAnagram('hello', 'world'));   // false

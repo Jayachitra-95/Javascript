@@ -1,0 +1,77 @@
+Classroom Assignment: Strings in JS
+Learning Objective:
+Understand how to reverse a string and check for palindromes in JavaScript by manipulating strings and
+using conditional logic.
+
+Assignment Details:
+Create a JavaScript function that accepts a string, reverses it, and checks if the reversed string is a
+palindrome, then test your function with various strings and print the results.
+
+Assignment Requirements:
+Write a function to reverse the string.
+1. Convert the input into characters
+2. Loop them in reverse direction
+3. Concatenate the string
+4. Print the new string
+
+my first answer :
+
+let myString = 'madam'; 
+
+console.log(myString.length);
+
+function reverseString(str) {
+    let reversed = "";     
+        for (let i = str.length - 1; i >= 0; i--) 
+        {
+        reversed = reversed + str.charAt(i);
+        }   
+    
+    return reversed;
+}
+
+
+function isPalindrome(str) {
+    let reversed = reverseString(str);
+    
+    if (str === reversed) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let result = reverseString(myString);
+console.log("Original:", myString);
+console.log("Reversed:", result);
+
+console.log("Is it a palindrome?", isPalindrome(myString));
+
+-------------------------
+
+using split :
+
+let myString = "racecar";
+
+function checkPalindrome(str) {
+    let characters = str.split(""); 
+    let reversedStr = "";
+
+    for (let i = characters.length - 1; i >= 0; i--) {
+        reversedStr += characters[i]; 
+    }
+
+    if (reversedStr === str) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log("Is it a palindrome?", checkPalindrome(myString));
+
+
+
+
+
+
